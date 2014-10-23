@@ -13,7 +13,7 @@ end;
 architecture FlasherArchitecture of Flasher is
 	signal counter : unsigned range 0 to 67108864;
 begin
-LED <= std_logic_vector(counter)(25);
+LED <= counter(25);
 
 counterProcess : process(CLK_66MHZ)
 begin
