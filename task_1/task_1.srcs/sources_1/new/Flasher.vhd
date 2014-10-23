@@ -1,5 +1,6 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 -- Toggles the LED state every half second
 
@@ -13,7 +14,7 @@ end;
 architecture FlasherArchitecture of Flasher is
 	signal counter : unsigned(25 downto 0); -- that makes 67108864 bit combinations
 begin
-LED <= counter(25); -- toggle LED together with the upper most bit
+LED(2) <= counter(25); -- toggle LED together with the upper most bit
 
 counterProcess : process(CLK_66MHZ)
 begin
