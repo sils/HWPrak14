@@ -11,9 +11,9 @@ entity Flasher is
 end;
 
 architecture FlasherArchitecture of Flasher is
-	signal counter : unsigned range 0 to 67108864;
+	signal counter : unsigned(25 downto 0); -- that makes 67108864 bit combinations
 begin
-LED <= counter(25);
+LED <= counter(25); -- toggle LED together with the upper most bit
 
 counterProcess : process(CLK_66MHZ)
 begin
