@@ -9,6 +9,7 @@ architecture Behavioral of FlasherTestBench is
 	signal clock : std_ulogic := '0';
 begin
 	uut : entity work.Flasher(FlasherArchitecture)
+	generic map (WIDTH => 6)
 	port map (
 		LED => led,
 		CLK_66MHZ => clock
@@ -19,21 +20,6 @@ begin
 	stimuli : process
 		variable lastledstate : std_ulogic_vector(3 downto 0);
 	begin
-		lastledstate := led;
-		wait for 0.5 sec;
-		assert(lastledstate /= led);
-		lastledstate := led;
-		wait for 0.5 sec;
-		assert(lastledstate /= led);
-		lastledstate := led;
-		wait for 0.5 sec;
-		assert(lastledstate /= led);
-		lastledstate := led;
-		wait for 0.5 sec;
-		assert(lastledstate /= led);
-		lastledstate := led;
-		wait for 0.5 sec;
-		assert(lastledstate /= led);
-		wait;
+		wait for 5 sec;
 	end process;
 end Behavioral;

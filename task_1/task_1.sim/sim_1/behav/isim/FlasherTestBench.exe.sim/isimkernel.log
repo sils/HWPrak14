@@ -2,27 +2,27 @@ Command line:
    FlasherTestBench.exe
      -simmode  gui
      -simrunnum  0
-     -socket  54128
+     -socket  54238
 
-Thu Oct 30 14:16:50 2014
+Thu Oct 30 14:31:11 2014
 
 
- Elaboration Time: 0.109201 sec
+ Elaboration Time: 0.0624 sec
 
- Current Memory Usage: 1475.53 Meg
+ Current Memory Usage: 1320.34 Meg
 
  Total Signals          : 5
- Total Nets             : 31
- Total Signal Drivers   : 4
+ Total Nets             : 12
+ Total Signal Drivers   : 6
  Total Blocks           : 4
  Total Primitive Blocks : 3
- Total Processes        : 4
- Total Traceable Variables  : 13
- Total Scalar Nets and Variables : 514
+ Total Processes        : 7
+ Total Traceable Variables  : 14
+ Total Scalar Nets and Variables : 496
 
- Total Simulation Time: 0.171601 sec
+ Total Simulation Time: 0.0624 sec
 
- Current Memory Usage: 1160.92 Meg
+ Current Memory Usage: 848.445 Meg
 
-Thu Oct 30 14:18:00 2014
+Thu Oct 30 14:34:01 2014
 

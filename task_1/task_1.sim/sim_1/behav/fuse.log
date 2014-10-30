@@ -11,11 +11,11 @@ Completed static elaboration
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package numeric_std
-Compiling architecture flasherarchitecture of entity Flasher [flasher_default]
+Compiling architecture flasherarchitecture of entity Flasher [\Flasher(6)\]
 Compiling architecture behavioral of entity flashertestbench
 Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
 Compiled 6 VHDL Units
 Built simulation executable FlasherTestBench.exe
-Fuse Memory Usage: 36508 KB
-Fuse CPU Usage: 483 ms
+Fuse Memory Usage: 36396 KB
+Fuse CPU Usage: 529 ms

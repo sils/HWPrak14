@@ -41,7 +41,7 @@ static void work_a_3090976921_3212880686_p_0(char *t0)
     char *t10;
     char *t11;
 
-LAB0:    xsi_set_current_line(17, ng0);
+LAB0:    xsi_set_current_line(18, ng0);
 
 LAB3:    t1 = (7.5757575700000004 * 1000LL);
     t2 = (t0 + 1192U);
@@ -70,13 +70,7 @@ static void work_a_3090976921_3212880686_p_1(char *t0)
 {
     char *t1;
     char *t2;
-    char *t3;
-    char *t4;
-    int64 t5;
-    unsigned char t6;
-    unsigned int t7;
-    char *t8;
-    char *t9;
+    int64 t3;
 
 LAB0:    t1 = (t0 + 2720U);
     t2 = *((char **)t1);
@@ -85,276 +79,19 @@ LAB0:    t1 = (t0 + 2720U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(22, ng0);
-    t2 = (t0 + 1032U);
-    t3 = *((char **)t2);
-    t2 = (t0 + 1488U);
-    t4 = *((char **)t2);
-    t2 = (t4 + 0);
-    memcpy(t2, t3, 4U);
-    xsi_set_current_line(23, ng0);
-    t5 = (0.50000000000000000 * 1000000000000LL);
+LAB2:    xsi_set_current_line(23, ng0);
+    t3 = (5 * 1000000000000LL);
     t2 = (t0 + 2528);
-    xsi_process_wait(t2, t5);
+    xsi_process_wait(t2, t3);
 
 LAB6:    *((char **)t1) = &&LAB7;
 
 LAB1:    return;
-LAB4:    xsi_set_current_line(24, ng0);
-    t2 = (t0 + 1488U);
-    t3 = *((char **)t2);
-    t2 = (t0 + 1032U);
-    t4 = *((char **)t2);
-    t6 = 1;
-    if (4U == 4U)
-        goto LAB10;
-
-LAB11:    t6 = 0;
-
-LAB12:    if ((!(t6)) == 0)
-        goto LAB8;
-
-LAB9:    xsi_set_current_line(25, ng0);
-    t2 = (t0 + 1032U);
-    t3 = *((char **)t2);
-    t2 = (t0 + 1488U);
-    t4 = *((char **)t2);
-    t2 = (t4 + 0);
-    memcpy(t2, t3, 4U);
-    xsi_set_current_line(26, ng0);
-    t5 = (0.50000000000000000 * 1000000000000LL);
-    t2 = (t0 + 2528);
-    xsi_process_wait(t2, t5);
-
-LAB18:    *((char **)t1) = &&LAB19;
-    goto LAB1;
+LAB4:    goto LAB2;
 
 LAB5:    goto LAB4;
 
 LAB7:    goto LAB5;
-
-LAB8:    t9 = (t0 + 5449);
-    xsi_report(t9, 19U, 2);
-    goto LAB9;
-
-LAB10:    t7 = 0;
-
-LAB13:    if (t7 < 4U)
-        goto LAB14;
-    else
-        goto LAB12;
-
-LAB14:    t2 = (t3 + t7);
-    t8 = (t4 + t7);
-    if (*((unsigned char *)t2) != *((unsigned char *)t8))
-        goto LAB11;
-
-LAB15:    t7 = (t7 + 1);
-    goto LAB13;
-
-LAB16:    xsi_set_current_line(27, ng0);
-    t2 = (t0 + 1488U);
-    t3 = *((char **)t2);
-    t2 = (t0 + 1032U);
-    t4 = *((char **)t2);
-    t6 = 1;
-    if (4U == 4U)
-        goto LAB22;
-
-LAB23:    t6 = 0;
-
-LAB24:    if ((!(t6)) == 0)
-        goto LAB20;
-
-LAB21:    xsi_set_current_line(28, ng0);
-    t2 = (t0 + 1032U);
-    t3 = *((char **)t2);
-    t2 = (t0 + 1488U);
-    t4 = *((char **)t2);
-    t2 = (t4 + 0);
-    memcpy(t2, t3, 4U);
-    xsi_set_current_line(29, ng0);
-    t5 = (0.50000000000000000 * 1000000000000LL);
-    t2 = (t0 + 2528);
-    xsi_process_wait(t2, t5);
-
-LAB30:    *((char **)t1) = &&LAB31;
-    goto LAB1;
-
-LAB17:    goto LAB16;
-
-LAB19:    goto LAB17;
-
-LAB20:    t9 = (t0 + 5469);
-    xsi_report(t9, 19U, 2);
-    goto LAB21;
-
-LAB22:    t7 = 0;
-
-LAB25:    if (t7 < 4U)
-        goto LAB26;
-    else
-        goto LAB24;
-
-LAB26:    t2 = (t3 + t7);
-    t8 = (t4 + t7);
-    if (*((unsigned char *)t2) != *((unsigned char *)t8))
-        goto LAB23;
-
-LAB27:    t7 = (t7 + 1);
-    goto LAB25;
-
-LAB28:    xsi_set_current_line(30, ng0);
-    t2 = (t0 + 1488U);
-    t3 = *((char **)t2);
-    t2 = (t0 + 1032U);
-    t4 = *((char **)t2);
-    t6 = 1;
-    if (4U == 4U)
-        goto LAB34;
-
-LAB35:    t6 = 0;
-
-LAB36:    if ((!(t6)) == 0)
-        goto LAB32;
-
-LAB33:    xsi_set_current_line(31, ng0);
-    t2 = (t0 + 1032U);
-    t3 = *((char **)t2);
-    t2 = (t0 + 1488U);
-    t4 = *((char **)t2);
-    t2 = (t4 + 0);
-    memcpy(t2, t3, 4U);
-    xsi_set_current_line(32, ng0);
-    t5 = (0.50000000000000000 * 1000000000000LL);
-    t2 = (t0 + 2528);
-    xsi_process_wait(t2, t5);
-
-LAB42:    *((char **)t1) = &&LAB43;
-    goto LAB1;
-
-LAB29:    goto LAB28;
-
-LAB31:    goto LAB29;
-
-LAB32:    t9 = (t0 + 5489);
-    xsi_report(t9, 19U, 2);
-    goto LAB33;
-
-LAB34:    t7 = 0;
-
-LAB37:    if (t7 < 4U)
-        goto LAB38;
-    else
-        goto LAB36;
-
-LAB38:    t2 = (t3 + t7);
-    t8 = (t4 + t7);
-    if (*((unsigned char *)t2) != *((unsigned char *)t8))
-        goto LAB35;
-
-LAB39:    t7 = (t7 + 1);
-    goto LAB37;
-
-LAB40:    xsi_set_current_line(33, ng0);
-    t2 = (t0 + 1488U);
-    t3 = *((char **)t2);
-    t2 = (t0 + 1032U);
-    t4 = *((char **)t2);
-    t6 = 1;
-    if (4U == 4U)
-        goto LAB46;
-
-LAB47:    t6 = 0;
-
-LAB48:    if ((!(t6)) == 0)
-        goto LAB44;
-
-LAB45:    xsi_set_current_line(34, ng0);
-    t2 = (t0 + 1032U);
-    t3 = *((char **)t2);
-    t2 = (t0 + 1488U);
-    t4 = *((char **)t2);
-    t2 = (t4 + 0);
-    memcpy(t2, t3, 4U);
-    xsi_set_current_line(35, ng0);
-    t5 = (0.50000000000000000 * 1000000000000LL);
-    t2 = (t0 + 2528);
-    xsi_process_wait(t2, t5);
-
-LAB54:    *((char **)t1) = &&LAB55;
-    goto LAB1;
-
-LAB41:    goto LAB40;
-
-LAB43:    goto LAB41;
-
-LAB44:    t9 = (t0 + 5509);
-    xsi_report(t9, 19U, 2);
-    goto LAB45;
-
-LAB46:    t7 = 0;
-
-LAB49:    if (t7 < 4U)
-        goto LAB50;
-    else
-        goto LAB48;
-
-LAB50:    t2 = (t3 + t7);
-    t8 = (t4 + t7);
-    if (*((unsigned char *)t2) != *((unsigned char *)t8))
-        goto LAB47;
-
-LAB51:    t7 = (t7 + 1);
-    goto LAB49;
-
-LAB52:    xsi_set_current_line(36, ng0);
-    t2 = (t0 + 1488U);
-    t3 = *((char **)t2);
-    t2 = (t0 + 1032U);
-    t4 = *((char **)t2);
-    t6 = 1;
-    if (4U == 4U)
-        goto LAB58;
-
-LAB59:    t6 = 0;
-
-LAB60:    if ((!(t6)) == 0)
-        goto LAB56;
-
-LAB57:    xsi_set_current_line(37, ng0);
-
-LAB66:    *((char **)t1) = &&LAB67;
-    goto LAB1;
-
-LAB53:    goto LAB52;
-
-LAB55:    goto LAB53;
-
-LAB56:    t9 = (t0 + 5529);
-    xsi_report(t9, 19U, 2);
-    goto LAB57;
-
-LAB58:    t7 = 0;
-
-LAB61:    if (t7 < 4U)
-        goto LAB62;
-    else
-        goto LAB60;
-
-LAB62:    t2 = (t3 + t7);
-    t8 = (t4 + t7);
-    if (*((unsigned char *)t2) != *((unsigned char *)t8))
-        goto LAB59;
-
-LAB63:    t7 = (t7 + 1);
-    goto LAB61;
-
-LAB64:    goto LAB2;
-
-LAB65:    goto LAB64;
-
-LAB67:    goto LAB65;
 
 }
 
