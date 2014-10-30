@@ -1,0 +1,1 @@
+-intstyle "pa" -incremental -L "work" -L "secureip" -o "FlasherTestBench.exe" --prj "H:/hwprak/task_1/task_1.sim/sim_1/behav/FlasherTestBench.prj" -top "work.FlasherTestBench" 
