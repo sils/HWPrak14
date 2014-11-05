@@ -1,0 +1,10 @@
+Command line:
+   LEDPWM_tb.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  50707
+
+Wed Nov 05 11:02:10 2014
+
+
+ Elaboration Time: 0.078 sec

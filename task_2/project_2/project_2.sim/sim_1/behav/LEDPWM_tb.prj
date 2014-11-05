@@ -1,0 +1,4 @@
+vhdl work "H:/hwprak/task_2/project_2/project_2.srcs/sources_1/new/LEDPWM.vhd"
+vhdl work "H:/hwprak/task_2/project_2/project_2.srcs/sources_1/new/Dimmer.vhd"
+vhdl work "H:/hwprak/task_2/project_2/project_2.srcs/sim_1/new/LEDPWM_tb.vhd"
+verilog work C:/Xilinx/14.6/ISE_DS/PlanAhead/data/verilog/src/glbl.v
