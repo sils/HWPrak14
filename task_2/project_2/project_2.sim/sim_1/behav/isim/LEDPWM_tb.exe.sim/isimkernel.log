@@ -2,9 +2,27 @@ Command line:
    LEDPWM_tb.exe
      -simmode  gui
      -simrunnum  0
-     -socket  50707
+     -socket  55325
 
-Wed Nov 05 11:02:10 2014
+Thu Nov 06 13:30:09 2014
 
 
- Elaboration Time: 0.078 sec
+ Elaboration Time: 0.156001 sec
+
+ Current Memory Usage: 1318.24 Meg
+
+ Total Signals          : 11
+ Total Nets             : 48
+ Total Signal Drivers   : 9
+ Total Blocks           : 5
+ Total Primitive Blocks : 3
+ Total Processes        : 9
+ Total Traceable Variables  : 15
+ Total Scalar Nets and Variables : 533
+
+ Total Simulation Time: 34.2578 sec
+
+ Current Memory Usage: 1475.49 Meg
+
+Thu Nov 06 13:31:10 2014
+

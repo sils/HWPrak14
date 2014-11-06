@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "//nap.rz.tu-harburg.de/fs2$/19/sils1297/windows/hwprak/task_2/project_2/project_2.srcs/sources_1/new/Dimmer.vhd";
+static const char *ng0 = "//nap.rz.tu-harburg.de/fs1$/18/sims1301/windows/Xilinx/project_2/project_2.srcs/sources_1/new/Dimmer.vhd";
 extern char *IEEE_P_2592010699;
 extern char *IEEE_P_1242562249;
 
@@ -63,7 +63,7 @@ LAB1:    return;
 LAB2:    xsi_set_current_line(31, ng0);
     t4 = (t0 + 1352U);
     t5 = *((char **)t4);
-    t4 = (t0 + 5696U);
+    t4 = (t0 + 5636U);
     t6 = ieee_p_1242562249_sub_1919365254_1035706684(IEEE_P_1242562249, t3, t5, t4, 1);
     t7 = (t3 + 12U);
     t8 = *((unsigned int *)t7);
@@ -82,7 +82,7 @@ LAB6:    t11 = (t0 + 3192);
     xsi_set_current_line(33, ng0);
     t1 = (t0 + 1352U);
     t4 = *((char **)t1);
-    t1 = (t0 + 5696U);
+    t1 = (t0 + 5636U);
     t2 = ieee_p_1242562249_sub_1781507893_1035706684(IEEE_P_1242562249, t4, t1, 0);
     if (t2 != 0)
         goto LAB7;
@@ -96,7 +96,7 @@ LAB5:    xsi_size_not_matching(26U, t9, 0);
 LAB7:    xsi_set_current_line(34, ng0);
     t5 = (t0 + 1512U);
     t6 = *((char **)t5);
-    t5 = (t0 + 5712U);
+    t5 = (t0 + 5652U);
     t7 = ieee_p_1242562249_sub_1919365254_1035706684(IEEE_P_1242562249, t3, t6, t5, 32);
     t11 = (t3 + 12U);
     t8 = *((unsigned int *)t11);

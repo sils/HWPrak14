@@ -4,6 +4,8 @@
     <Filter Type="Constrs"/>
     <File Path="$PSRCDIR/constrs_1/new/constrains.ucf">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PSRCDIR/constrs_1/new/constrains.ucf"/>
+        <Attr Name="ImportTime" Val="1415276666"/>
         <Attr Name="UsedInSynthesis" Val="1"/>
         <Attr Name="UsedInImplementation" Val="1"/>
       </FileInfo>

@@ -4,12 +4,16 @@
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/LEDPWM.vhd">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/LEDPWM.vhd"/>
+        <Attr Name="ImportTime" Val="1415276666"/>
         <Attr Name="UsedInSynthesis" Val="1"/>
         <Attr Name="UsedInSimulation" Val="1"/>
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/Dimmer.vhd">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/Dimmer.vhd"/>
+        <Attr Name="ImportTime" Val="1415276666"/>
         <Attr Name="UsedInSynthesis" Val="1"/>
         <Attr Name="UsedInSimulation" Val="1"/>
       </FileInfo>

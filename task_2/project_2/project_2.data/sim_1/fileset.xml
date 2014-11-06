@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <DARoots Version="1" Minor="26">
   <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
+    <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sim_1/new/LEDPWM_tb.vhd">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PSRCDIR/sim_1/new/LEDPWM_tb.vhd"/>
+        <Attr Name="ImportTime" Val="1415276666"/>
         <Attr Name="UsedInSynthesis" Val="1"/>
         <Attr Name="UsedInSimulation" Val="1"/>
       </FileInfo>

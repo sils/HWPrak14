@@ -10,7 +10,7 @@ set PATH=%XILINX%\lib\%PLATFORM%;%XILINX%\bin\%PLATFORM%;C:/Xilinx/14.6/ISE_DS/E
 
 set XILINX_PLANAHEAD=C:/Xilinx/14.6/ISE_DS/PlanAhead
 
-fuse -intstyle pa -incremental -L work -L secureip -o LEDPWM_tb.exe --prj H:/hwprak/task_2/project_2/project_2.sim/sim_1/behav/LEDPWM_tb.prj -top work.LEDPWM_tb
+fuse -intstyle pa -incremental -L work -L secureip -o LEDPWM_tb.exe --prj H:/Xilinx/project_2/project_2.sim/sim_1/behav/LEDPWM_tb.prj -top work.LEDPWM_tb
 if errorlevel 1 (
    cmd /c exit /b %errorlevel%
 )
