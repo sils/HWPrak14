@@ -29,6 +29,9 @@ architecture Behavioral of unite is
 	signal dout   : std_logic_vector(7 downto 0);
 	signal cmd_ack  : std_logic; -- command done
 	signal ack_out  : std_logic;
+	
+	-- we ignore those values:
+	signal i2c_busy, i2c_al : std_logic;
 begin
 
 
@@ -77,8 +80,8 @@ begin
   	port map (
   		clk    => CLK_66MHZ,
 		rst    => USER_RESET, -- synchronous active high reset (WISHBONE compatible)
-		--nReset => ,-- asynchronous active low reset (FPGA compatible)
-		--ena    : in std_logic; -- core enable signal
+		nReset => '1', -- asynchronous active low reset (FPGA compatible)
+		ena    => '1', -- core enable signal
  
 		--clk_cnt : in unsigned(15 downto 0);	-- 4x SCL
  
@@ -93,8 +96,8 @@ begin
 		-- output signals
 		cmd_ack => cmd_ack,
 		ack_out  => ack_out,
-		--i2c_busy : out std_logic; -- arbitration lost
-		--i2c_al   : out std_logic; -- i2c bus busy
+		i2c_busy => i2c_busy, -- ignored
+		i2c_al => i2c_al, -- ignored
 		dout => dout,
  
 		-- i2c lines
