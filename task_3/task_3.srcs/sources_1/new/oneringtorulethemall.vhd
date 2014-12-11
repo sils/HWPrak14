@@ -1,5 +1,6 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use ieee.numeric_std.all; 
 
 entity unite is
     Port (
@@ -35,7 +36,7 @@ architecture Behavioral of unite is
 begin
 
 
- pwm : entity work.PWM(Behavioral)
+ pwm : entity work.LEDPWM(Behavioral)
  	generic map (WIDTH => 25)
  	port map (
  		CLK_66MHZ => CLK_66MHZ,
@@ -83,6 +84,7 @@ begin
 		nReset => '1', -- asynchronous active low reset (FPGA compatible)
 		ena    => '1', -- core enable signal
  
+        clk_cnt => "0000011001110010",
 		--clk_cnt : in unsigned(15 downto 0);	-- 4x SCL
  
 		-- input signals

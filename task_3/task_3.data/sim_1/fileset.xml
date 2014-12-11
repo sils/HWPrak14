@@ -2,12 +2,24 @@
 <DARoots Version="1" Minor="26">
   <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sim_1/new/test.vhd">
+      <FileInfo>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/new/testeverything.vhd">
+      <FileInfo>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="unite"/>
+      <Option Name="TopModule" Val="testeverything_tb"/>
       <Option Name="TopLib" Val="work"/>
       <Option Name="TopArchitecture" Val="Behavioral"/>
-      <Option Name="TopRTLFile" Val="$PSRCDIR/sources_1/new/oneringtorulethemall.vhd"/>
+      <Option Name="TopRTLFile" Val="$PSRCDIR/sim_1/new/testeverything.vhd"/>
       <Option Name="TopAutoSet" Val="TRUE"/>
       <Option Name="SrcSet" Val="sources_1"/>
     </Config>

@@ -1,10 +1,11 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 entity FSM is
     Port (
 		clk    : in std_logic;
-		out_val: in  std_logic_vector(7 downto 0);
+		out_val: out unsigned(7 downto 0);
 		
 		-- everything below is the interface to the i2c driver
     	start,
@@ -67,7 +68,7 @@ begin
 			when S4 =>
 				stop <= '1';
 				start <= '0';
-				out_val <= dout;
+				out_val <= unsigned(dout);
 				ack_in <= '1';
 		end case;
 	end process;
