@@ -1,0 +1,10 @@
+Command line:
+   testeverything_tb.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  52249
+
+Thu Dec 11 13:52:15 2014
+
+
+ Elaboration Time: 0.171601 sec

@@ -13,13 +13,13 @@ architecture Behavioral of testeverything_tb is
 begin
 clock <= not clock after 7.57575757 ns;
 	
-i2cclient : entity ADS7830(RTL)
+i2cclient : entity work.ADS7830(RTL)
 	port map (
 		SDA	=> SDA,
 		SCL	=> SCL
 	);
 
-united : entity unite(Behavioral)
+united : entity work.unite(Behavioral)
 	port map (
 		LED => led,
 		CLK_66MHZ => clock,
@@ -30,7 +30,7 @@ united : entity unite(Behavioral)
 		
 stimuli : process
 	begin
-		USER_RESET := '1';
+		USER_RESET <= '1';
 	end process;
 
 end Behavioral;

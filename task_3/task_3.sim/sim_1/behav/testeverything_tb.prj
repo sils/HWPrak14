@@ -1,0 +1,9 @@
+vhdl work "H:/hwprak/task_3/task_3.srcs/sources_1/new/i2c_master_bit_ctrl.vhd"
+vhdl work "H:/hwprak/task_3/task_3.srcs/sources_1/new/tri-state.vhd"
+vhdl work "H:/hwprak/task_3/task_3.srcs/sources_1/new/PWM.vhd"
+vhdl work "H:/hwprak/task_3/task_3.srcs/sources_1/new/i2c.vhd"
+vhdl work "H:/hwprak/task_3/task_3.srcs/sources_1/new/FSM.vhd"
+vhdl work "H:/hwprak/task_3/task_3.srcs/sources_1/new/oneringtorulethemall.vhd"
+vhdl work "H:/hwprak/task_3/task_3.srcs/sim_1/new/test.vhd"
+vhdl work "H:/hwprak/task_3/task_3.srcs/sim_1/new/testeverything.vhd"
+verilog work C:/Xilinx/14.6/ISE_DS/PlanAhead/data/verilog/src/glbl.v

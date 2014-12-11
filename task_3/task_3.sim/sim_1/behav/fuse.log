@@ -1,0 +1,33 @@
+Running: C:\Xilinx\14.6\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle pa -incremental -L work -L secureip -o testeverything_tb.exe --prj H:/hwprak/task_3/task_3.sim/sim_1/behav/testeverything_tb.prj -top work.testeverything_tb 
+ISim P.68d (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "C:/Xilinx/14.6/ISE_DS/PlanAhead/data/verilog/src/glbl.v" into library work
+Parsing VHDL file "H:/hwprak/task_3/task_3.srcs/sources_1/new/i2c_master_bit_ctrl.vhd" into library work
+Parsing VHDL file "H:/hwprak/task_3/task_3.srcs/sources_1/new/tri-state.vhd" into library work
+Parsing VHDL file "H:/hwprak/task_3/task_3.srcs/sources_1/new/PWM.vhd" into library work
+Parsing VHDL file "H:/hwprak/task_3/task_3.srcs/sources_1/new/i2c.vhd" into library work
+Parsing VHDL file "H:/hwprak/task_3/task_3.srcs/sources_1/new/FSM.vhd" into library work
+Parsing VHDL file "H:/hwprak/task_3/task_3.srcs/sources_1/new/oneringtorulethemall.vhd" into library work
+Parsing VHDL file "H:/hwprak/task_3/task_3.srcs/sim_1/new/test.vhd" into library work
+Parsing VHDL file "H:/hwprak/task_3/task_3.srcs/sim_1/new/testeverything.vhd" into library work
+WARNING:HDLCompiler:1369 - "H:/hwprak/task_3/task_3.srcs/sim_1/new/testeverything.vhd" Line 31: Possible infinite loop; process does not have a wait statement
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling architecture rtl of entity ADS7830 [ads7830_default]
+Compiling architecture behavioral of entity LEDPWM [\LEDPWM(25)\]
+Compiling architecture behavioral of entity tristate [tristate_default]
+Compiling architecture moore of entity FSM [fsm_default]
+Compiling architecture structural of entity i2c_master_bit_ctrl [i2c_master_bit_ctrl_default]
+Compiling architecture structural of entity i2c_master_byte_ctrl [i2c_master_byte_ctrl_default]
+Compiling architecture behavioral of entity unite [unite_default]
+Compiling architecture behavioral of entity testeverything_tb
+Time Resolution for simulation is 1ps.
+Compiled 18 VHDL Units
+Built simulation executable testeverything_tb.exe
+Fuse Memory Usage: 37168 KB
+Fuse CPU Usage: 654 ms
