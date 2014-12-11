@@ -31,6 +31,10 @@ united : entity work.unite(Behavioral)
 stimuli : process
 	begin
 		USER_RESET <= '1';
+		wait for 40ns;
+		USER_RESET <= '0';
+		wait for 1000ms;
+		wait;
 	end process;
 
 end Behavioral;

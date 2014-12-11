@@ -14,7 +14,7 @@ end ADS7830;
 architecture RTL of ADS7830 is
 
 	constant CMD_WORD			: std_logic_vector(7 downto 0) := x"8C"; 
-	constant MEM_WORD			: std_logic_vector(7 downto 0) := x"01"; --x"9A";
+	constant MEM_WORD			: std_logic_vector(7 downto 0) := x"55"; --x"9A";
 	
 	signal SDA_latched		: std_logic := '1';	
 	signal start_or_stop	: std_logic; 	

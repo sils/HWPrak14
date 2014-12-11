@@ -5,8 +5,5 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="1369" delta="unknown" >"H:/hwprak/task_3/task_3.srcs/sim_1/new/testeverything.vhd" Line 31: Possible infinite loop; process does not have a wait statement
-</msg>
-
 </messages>
 

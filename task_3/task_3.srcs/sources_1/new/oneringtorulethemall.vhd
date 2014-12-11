@@ -84,7 +84,7 @@ begin
 		nReset => '1', -- asynchronous active low reset (FPGA compatible)
 		ena    => '1', -- core enable signal
  
-        clk_cnt => "0000011001110010",
+        clk_cnt => "0000000010100101",
 		--clk_cnt : in unsigned(15 downto 0);	-- 4x SCL
  
 		-- input signals
