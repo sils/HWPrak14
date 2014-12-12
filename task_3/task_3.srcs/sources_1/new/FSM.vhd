@@ -24,7 +24,7 @@ end FSM;
 architecture moore of FSM is
 	type StateType is (S1, S2, S3, S4);
 	signal currentState, nextState : StateType;
-
+    signal dout_save: unsigned(7 downto 0) := "00000000";
 begin
 	transition : process(currentState, cmd_ack)
 	begin
@@ -68,7 +68,8 @@ begin
 			when S4 =>
 				stop <= '1';
 				start <= '0';
-				out_val <= unsigned(dout);
+				dout_save <= unsigned(dout);
+				out_val <= dout_save;
 				ack_in <= '1';
 		end case;
 	end process;

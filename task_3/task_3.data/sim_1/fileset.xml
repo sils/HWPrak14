@@ -2,7 +2,7 @@
 <DARoots Version="1" Minor="26">
   <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sim_1/new/ads7830.vhd">
+    <File Path="$PSRCDIR/sim_1/new/test.vhd">
       <FileInfo>
         <Attr Name="UsedInSynthesis" Val="1"/>
         <Attr Name="UsedInSimulation" Val="1"/>
@@ -14,7 +14,7 @@
         <Attr Name="UsedInSimulation" Val="1"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sim_1/new/test.vhd">
+    <File Path="$PSRCDIR/sim_1/new/ads7830.vhd">
       <FileInfo>
         <Attr Name="UsedInSynthesis" Val="1"/>
         <Attr Name="UsedInSimulation" Val="1"/>
