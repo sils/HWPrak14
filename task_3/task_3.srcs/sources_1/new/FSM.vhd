@@ -6,6 +6,7 @@ entity FSM is
     Port (
 		clk    : in std_logic;
 		out_val: out unsigned(7 downto 0);
+		user_reset : in std_logic;
 		
 		-- everything below is the interface to the i2c driver
     	start,
@@ -23,7 +24,7 @@ end FSM;
 
 architecture moore of FSM is
 	type StateType is (S1, S2, S3, S4);
-	signal currentState, nextState : StateType;
+	signal currentState, nextState: StateType;
     signal dout_save: unsigned(7 downto 0) := "00000000";
 begin
 	transition : process(currentState, cmd_ack)
@@ -45,7 +46,11 @@ begin
 	stateMemory : process(clk)
 	begin
 		if rising_edge(clk) then
-			currentState <= nextState;
+		    if user_reset = '1' then
+		        currentState <= S1;
+		    else
+			    currentState <= nextState;
+			end if;
 		end if;
 	end process;
 	
@@ -57,6 +62,8 @@ begin
 				stop <= '0';
 				ack_in <= '0';
 				din <= "10010000";
+				write <= '0';
+				read <= '0';
 			when S2 =>
 				stop <= '1';
 				start <= '0';

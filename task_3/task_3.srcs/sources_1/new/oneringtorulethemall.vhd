@@ -63,6 +63,7 @@ begin
     port map (
 		clk    => CLK_66MHZ,
 		out_val=> duty_cycle,
+		user_reset => USER_RESET,
 		
 		-- everything below is the interface to the i2c driver
     	start => start,

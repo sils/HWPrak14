@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "//nap.rz.tu-harburg.de/fs2$/19/sils1297/windows/hwprak/task_3/task_3.srcs/sim_1/new/test.vhd";
+static const char *ng0 = "//nap.rz.tu-harburg.de/fs2$/19/sils1297/windows/hwprak/task_3/task_3.srcs/sim_1/new/ads7830.vhd";
 extern char *IEEE_P_2592010699;
 extern char *IEEE_P_1242562249;
 
@@ -416,7 +416,7 @@ LAB3:    t1 = (t0 + 10184);
 
 LAB1:    return;
 LAB2:    xsi_set_current_line(63, ng0);
-    t1 = (t0 + 17608);
+    t1 = (t0 + 17740);
     t6 = (t0 + 10840);
     t7 = (t6 + 56U);
     t8 = *((char **)t7);
@@ -445,7 +445,7 @@ LAB5:    xsi_set_current_line(66, ng0);
 LAB12:    xsi_set_current_line(70, ng0);
     t1 = (t0 + 1672U);
     t2 = *((char **)t1);
-    t1 = (t0 + 17468U);
+    t1 = (t0 + 17600U);
     t5 = ieee_p_1242562249_sub_1919437128_1035706684(IEEE_P_1242562249, t17, t2, t1, 1);
     t6 = (t17 + 12U);
     t18 = *((unsigned int *)t6);
@@ -472,7 +472,7 @@ LAB7:    t2 = (t0 + 4072U);
     goto LAB9;
 
 LAB10:    xsi_set_current_line(67, ng0);
-    t2 = (t0 + 17612);
+    t2 = (t0 + 17744);
     t8 = (t0 + 10840);
     t9 = (t8 + 56U);
     t10 = *((char **)t9);
@@ -682,8 +682,8 @@ LAB7:    t2 = (t0 + 4072U);
 LAB10:    xsi_set_current_line(87, ng0);
     t2 = (t0 + 1672U);
     t7 = *((char **)t2);
-    t2 = (t0 + 17468U);
-    t8 = (t0 + 17616);
+    t2 = (t0 + 17600U);
+    t8 = (t0 + 17748);
     t15 = (t14 + 0U);
     t16 = (t15 + 0U);
     *((int *)t16) = 0;
@@ -714,7 +714,7 @@ LAB15:    xsi_set_current_line(90, ng0);
     xsi_set_current_line(91, ng0);
     t1 = (t0 + 3752U);
     t2 = *((char **)t1);
-    t1 = (t0 + 17619);
+    t1 = (t0 + 17751);
     t18 = (6 - 6);
     t21 = (t18 * 1U);
     t22 = (0 + t21);
@@ -824,8 +824,8 @@ LAB30:    t1 = (t0 + 2472U);
 LAB33:    xsi_set_current_line(98, ng0);
     t1 = (t0 + 1672U);
     t8 = *((char **)t1);
-    t1 = (t0 + 17468U);
-    t13 = (t0 + 17626);
+    t1 = (t0 + 17600U);
+    t13 = (t0 + 17758);
     t16 = (t14 + 0U);
     t20 = (t16 + 0U);
     *((int *)t20) = 0;
@@ -846,8 +846,8 @@ LAB41:
 LAB40:    xsi_set_current_line(101, ng0);
     t1 = (t0 + 1672U);
     t2 = *((char **)t1);
-    t1 = (t0 + 17468U);
-    t5 = (t0 + 17629);
+    t1 = (t0 + 17600U);
+    t5 = (t0 + 17761);
     t7 = (t14 + 0U);
     t8 = (t7 + 0U);
     *((int *)t8) = 0;
