@@ -14,7 +14,7 @@ entity LEDPWM is
 end LEDPWM;
 
 architecture Behavioral of LEDPWM is
-	signal counter : unsigned(WIDTH downto 0) := (others => '0');
+	signal counter : unsigned(7 downto 0) := (others => '0');
 	signal ledstate : std_ulogic := '0';
 begin
 ledstate <= '1' when duty_cycle > counter else '0';

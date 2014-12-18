@@ -9,8 +9,10 @@ architecture Behavioral of testeverything_tb is
 	signal led : std_ulogic_vector(3 downto 0);
 	signal clock : std_ulogic := '0';
 	
-	signal SDA, SCL, USER_RESET: std_logic := '0';
+	signal SDA, SCL, USER_RESET: std_logic;
 begin
+SDA <= 'H';
+SCL <= 'H';
 clock <= not clock after 7.57575757 ns;
 	
 i2cclient : entity work.ADS7830(RTL)
@@ -31,7 +33,7 @@ united : entity work.unite(Behavioral)
 stimuli : process
 	begin
 		USER_RESET <= '1';
-		wait for 40ns;
+		wait for 10us;
 		USER_RESET <= '0';
 		wait for 1000ms;
 		wait;

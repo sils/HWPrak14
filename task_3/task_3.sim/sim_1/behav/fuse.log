@@ -1,4 +1,4 @@
-Running: C:\Xilinx\14.6\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle pa -incremental -L work -L secureip -o testeverything_tb.exe --prj H:/hwprak/task_3/task_3.sim/sim_1/behav/testeverything_tb.prj -top work.testeverything_tb 
+Running: fuse.exe -relaunch -intstyle "pa" -incremental -L "work" -L "secureip" -o "testeverything_tb.exe" --prj "H:/hwprak/task_3/task_3.sim/sim_1/behav/testeverything_tb.prj" -top "work.testeverything_tb" 
 ISim P.68d (signature 0x7708f090)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
@@ -29,5 +29,5 @@ Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
 Compiled 18 VHDL Units
 Built simulation executable testeverything_tb.exe
-Fuse Memory Usage: 37220 KB
-Fuse CPU Usage: 701 ms
+Fuse Memory Usage: 37216 KB
+Fuse CPU Usage: 795 ms

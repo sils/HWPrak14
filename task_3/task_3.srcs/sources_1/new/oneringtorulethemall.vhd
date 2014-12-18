@@ -74,8 +74,7 @@ begin
 		din    => din,
 		dout   => dout,
 		
-		cmd_ack=> cmd_ack,
-		ack_out=> ack_out
+		cmd_ack=> cmd_ack
     );
     
   i2c : entity work.i2c_master_byte_ctrl(structural)
@@ -98,9 +97,9 @@ begin
  
 		-- output signals
 		cmd_ack => cmd_ack,
-		ack_out  => ack_out,
-		i2c_busy => i2c_busy, -- ignored
-		i2c_al => i2c_al, -- ignored
+		ack_out  => open,
+		i2c_busy => open, -- ignored
+		i2c_al => open, -- ignored
 		dout => dout,
  
 		-- i2c lines

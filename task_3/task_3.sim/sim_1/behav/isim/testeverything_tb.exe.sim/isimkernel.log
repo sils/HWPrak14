@@ -2,27 +2,27 @@ Command line:
    testeverything_tb.exe
      -simmode  gui
      -simrunnum  0
-     -socket  52297
+     -socket  52149
 
-Fri Dec 12 10:32:02 2014
+Thu Dec 18 14:31:17 2014
 
 
- Elaboration Time: 0.109201 sec
+ Elaboration Time: 0.078001 sec
 
- Current Memory Usage: 1320.4 Meg
+ Current Memory Usage: 1318.31 Meg
 
- Total Signals          : 156
- Total Nets             : 220
- Total Signal Drivers   : 87
+ Total Signals          : 155
+ Total Nets             : 205
+ Total Signal Drivers   : 89
  Total Blocks           : 12
  Total Primitive Blocks : 8
- Total Processes        : 58
+ Total Processes        : 60
  Total Traceable Variables  : 27
- Total Scalar Nets and Variables : 767
+ Total Scalar Nets and Variables : 752
 
- Total Simulation Time: 0.124801 sec
+ Total Simulation Time: 16.8013 sec
 
- Current Memory Usage: 1320.4 Meg
+ Current Memory Usage: 1318.31 Meg
 
-Fri Dec 12 10:32:10 2014
+Thu Dec 18 14:31:42 2014
 

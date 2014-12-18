@@ -251,7 +251,7 @@ LAB2:    xsi_set_current_line(29, ng0);
     t7 = (t3 + 12U);
     t8 = *((unsigned int *)t7);
     t9 = (1U * t8);
-    t10 = (26U != t9);
+    t10 = (8U != t9);
     if (t10 == 1)
         goto LAB5;
 
@@ -260,11 +260,11 @@ LAB6:    t11 = (t0 + 4992);
     t13 = *((char **)t12);
     t14 = (t13 + 56U);
     t15 = *((char **)t14);
-    memcpy(t15, t6, 26U);
+    memcpy(t15, t6, 8U);
     xsi_driver_first_trans_fast(t11);
     goto LAB3;
 
-LAB5:    xsi_size_not_matching(26U, t9, 0);
+LAB5:    xsi_size_not_matching(8U, t9, 0);
     goto LAB6;
 
 }

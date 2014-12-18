@@ -17,8 +17,7 @@ entity FSM is
 		din    : out std_logic_vector(7 downto 0);
 		dout   : in  std_logic_vector(7 downto 0);
 		
-		cmd_ack  : in std_logic; -- command done
-		ack_out  : in std_logic
+		cmd_ack  : in std_logic -- command done
     );
 end FSM;
 
@@ -27,25 +26,36 @@ architecture moore of FSM is
 	signal currentState, nextState: StateType;
     signal dout_save: unsigned(7 downto 0) := "00000000";
 begin
-	transition : process(currentState, cmd_ack)
+	transition : process(currentState, cmd_ack,  dout)
 	begin
-		if cmd_ack = '1' then
+		nextState <= currentState;
 			case currentState is 
 				when S1 =>
+				if cmd_ack = '1' then
 					nextState <= S2;
+				end if;
 				when S2 =>
+				if cmd_ack = '1' then
 					nextState <= S3;
+				end if;
 				when S3 =>
+				if cmd_ack = '1' then
 					nextState <= S4;
+				end if;
 				when S4 =>
+				if cmd_ack = '1' then
 					nextState <= S1;
+				end if;
 			end case;
-		end if;
 	end process;
 	
 	stateMemory : process(clk)
 	begin
 		if rising_edge(clk) then
+		    if currentState = S4 and cmd_ack = '1' then
+		        dout_save <= unsigned(dout);
+		    end if;
+		
 		    if user_reset = '1' then
 		        currentState <= S1;
 		    else
@@ -54,7 +64,7 @@ begin
 		end if;
 	end process;
 	
-	outputs : process(currentState)
+	outputs : process(currentState, dout_save)
 	begin
 		case currentState is 
 			when S1 =>
@@ -62,23 +72,31 @@ begin
 				stop <= '0';
 				ack_in <= '0';
 				din <= "10010000";
-				write <= '0';
+				write <= '1';
 				read <= '0';
 			when S2 =>
-				stop <= '1';
+				stop <= '0';
 				start <= '0';
-				din <= "100011XX";
+				ack_in <= '0';
+				din <= "10001100";
+                write <= '1';
+                read <= '0';
 			when S3 =>
 				start <= '1';
 				stop <= '0';
+				ack_in <= '0';
 				din <= "10010001";
+                write <= '1';
+                read <= '0';
 			when S4 =>
 				stop <= '1';
 				start <= '0';
-				dout_save <= unsigned(dout);
-				out_val <= dout_save;
+				din <= "00000000";
 				ack_in <= '1';
+                write <= '0';
+                read <= '1';
 		end case;
+    out_val <= dout_save;
 	end process;
 
 end moore;
