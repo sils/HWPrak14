@@ -2,17 +2,24 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
-entity  Register is
-    Port ( inval : in STD_LOGIC;
-           outval : out STD_LOGIC;
-           set : in STD_LOGIC);
-end Register;
+entity SimpleRegister is
+	generic(
+		WIDTH : integer := 16
+	);
+	Port(
+		inval  : in  std_ulogic_vector(WIDTH - 1 downto 0);
+		outval : out std_ulogic_vector(WIDTH - 1 downto 0);
+		set    : in  std_ulogic;
+		clock  : in  std_ulogic
+	);
+end SimpleRegister;
 
-
-
-	architecture Behavioral of  Register is
-
+architecture Behavioral of SimpleRegister is
 begin
-
-
+	process(clock, set)
+	begin
+		if set = '1' and rising_edge(clock) then
+			outval <= inval;
+		end if;
+	end process;
 end Behavioral;

@@ -14,13 +14,14 @@ end DataMemory;
 
 architecture Behavioral of DataMemory is
 begin
-	BRAM_inst : entity work.BRAM
+	BRAM_inst : entity work.BRAM(Behavioral)
 		generic map(MEM_ADDR_WIDTH => 10,
 			        MEM_DATA_WIDTH => 16,
+			        EDGE_TYPE      => false,
 			        MEM_NAME       => "DataMemory")
 		port map(Clock       => clock,
-			     WriteEnable => WriteEnable,
-			     Address     => Address,
-			     WriteData   => WriteData,
-			     ReadData    => ReadData);
+			     WriteEnable => writeM,
+			     Address     => addressM,
+			     WriteData   => outM,
+			     ReadData    => inM);
 end Behavioral;

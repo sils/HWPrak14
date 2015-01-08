@@ -15,10 +15,11 @@ begin
 	BRAM_inst : entity work.BRAM
 		generic map(MEM_ADDR_WIDTH => 10,
 			        MEM_DATA_WIDTH => 16,
+			        EDGE_TYPE      => false,
 			        MEM_NAME       => "InstructionMemory")
 		port map(Clock       => clock,
-			     WriteEnable => WriteEnable,
-			     Address     => Address,
-			     WriteData   => WriteData,
-			     ReadData    => ReadData);
+			     WriteEnable => '0',
+			     Address     => pc,
+			     WriteData   => "0000000000000000",
+			     ReadData    => instruction);
 end Behavioral;
