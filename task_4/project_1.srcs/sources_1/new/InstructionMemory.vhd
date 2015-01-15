@@ -3,16 +3,20 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
 entity InstructionMemory is
+	generic(
+		WIDTH : integer := 16;
+		ADDRESS_WIDTH : integer := 10
+	);
 	Port(
-		instruction : out std_ulogic_vector(15 downto 0);
-		pc          : in  std_ulogic_vector(9 downto 0);
+		instruction : out std_ulogic_vector(WIDTH-1 downto 0);
+		pc          : in  std_ulogic_vector(ADDRESS_WIDTH-1 downto 0);
 		clock       : in  std_ulogic
 	);
 end InstructionMemory;
 
 architecture Behavioral of InstructionMemory is
 begin
-	BRAM_inst : entity work.BRAM
+	BRAM_inst : entity work.BRAM(Behavioral)
 		generic map(MEM_ADDR_WIDTH => 10,
 			        MEM_DATA_WIDTH => 16,
 			        EDGE_TYPE      => false,

@@ -19,8 +19,8 @@ entity CPU is
 	);
 end CPU;
 
-		architecture Behavioral of CPU is
-			signal ALU_out : std_ulogic_vector(WIDTH - 1 downto 0) 
+architecture Behavioral of CPU is
+	signal ALU_out : std_ulogic_vector(WIDTH - 1 downto 0) ;
 begin
 	register_A : entity work.SimpleRegister(Behavioral)
 		generic map(
@@ -32,9 +32,8 @@ begin
 			set    => ,
 			clock  => clock
 		);
-	register_D : 
 
-entity work .SimpleRegister(Behavioral)
+	register_D : entity work.SimpleRegister(Behavioral)
 		generic map(
 			WIDTH => WIDTH
 		)
