@@ -10,6 +10,7 @@ entity SimpleRegister is
 		inval  : in  std_ulogic_vector(WIDTH - 1 downto 0);
 		outval : out std_ulogic_vector(WIDTH - 1 downto 0);
 		set    : in  std_ulogic;
+		reset  : in  std_ulogic;
 		clock  : in  std_ulogic
 	);
 end SimpleRegister;
@@ -18,8 +19,12 @@ architecture Behavioral of SimpleRegister is
 begin
 	process(clock, set)
 	begin
-		if set = '1' and rising_edge(clock) then
-			outval <= inval;
+		if reset = '1' then
+			outval <= (others => '0');
+		else
+			if set = '1' and rising_edge(clock) then
+				outval <= inval;
+			end if;
 		end if;
 	end process;
 end Behavioral;
