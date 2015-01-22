@@ -18,7 +18,7 @@ begin
 		generic map(MEM_ADDR_WIDTH => 10,
 			        MEM_DATA_WIDTH => 16,
 			        EDGE_TYPE      => false,
-			        MEM_NAME       => "DataMemory")
+			        MEM_NAME       => "H:\hwprak\task_4\data.hack")
 		port map(Clock       => clock,
 			     WriteEnable => writeM,
 			     Address     => addressM,
