@@ -26,7 +26,7 @@ entity BRAM is
 	);
 end BRAM;
 
-architecture behavior of BRAM is
+architecture Behavioral of BRAM is
 
 	type MemType is array (0 to 2**MEM_ADDR_WIDTH-1) of bit_vector (MEM_DATA_WIDTH-1 downto 0); 
 	
@@ -65,4 +65,4 @@ begin
 		end if;
 	end process;
 
-end behavior;
+end Behavioral;

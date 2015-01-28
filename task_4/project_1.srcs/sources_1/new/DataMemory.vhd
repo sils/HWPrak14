@@ -13,6 +13,7 @@ entity DataMemory is
 end DataMemory;
 
 architecture Behavioral of DataMemory is
+	signal inMbuf : std_logic_vector(15 downto 0);
 begin
 	BRAM_inst : entity work.BRAM(Behavioral)
 		generic map(MEM_ADDR_WIDTH => 10,
@@ -21,7 +22,8 @@ begin
 			        MEM_NAME       => "H:\hwprak\task_4\data.hack")
 		port map(Clock       => clock,
 			     WriteEnable => writeM,
-			     Address     => addressM,
-			     WriteData   => outM,
-			     ReadData    => inM);
+			     Address     => std_logic_vector(addressM),
+			     WriteData   => std_logic_vector(outM),
+			     ReadData    => inMbuf);
+	inM <= std_ulogic_vector(inMbuf);
 end Behavioral;

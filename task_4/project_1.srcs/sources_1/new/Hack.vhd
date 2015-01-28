@@ -24,14 +24,14 @@ architecture Behavioral of Hack is
 begin
 	CPU_inst : entity work.CPU(Behavioral)
 		port map(
-			inM         => inM,
-			instruction => instruction,
-			reset       => reset,
-			outM        => outM,
-			writeM      => writeM,
-			addressM    => addressM,
-			pc          => pc,
-			clock       => clock
+			inM          => inM,
+			instruction  => instruction,
+			reset        => reset,
+			outM         => outM,
+			writeM       => writeM,
+			addressM_out => addressM,
+			pc           => pc,
+			clock        => clock
 		);
 
 	DataMemory_inst : entity work.DataMemory(Behavioral)

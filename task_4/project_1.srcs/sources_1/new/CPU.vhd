@@ -8,19 +8,19 @@ entity CPU is
 		ADDRESS_WIDTH : integer := 10
 	);
 	Port(
-		inM         : in  std_ulogic_vector(WIDTH - 1 downto 0);
-		instruction : in  std_ulogic_vector(WIDTH - 1 downto 0);
-		reset       : in  std_ulogic;
-		outM        : out std_ulogic_vector(WIDTH - 1 downto 0);
-		writeM      : out std_ulogic;
-		addressM    : out std_ulogic_vector(ADDRESS_WIDTH - 1 downto 0);
-		pc          : out std_ulogic_vector(ADDRESS_WIDTH - 1 downto 0);
-		clock       : in  std_ulogic
+		inM          : in  std_ulogic_vector(WIDTH - 1 downto 0);
+		instruction  : in  std_ulogic_vector(WIDTH - 1 downto 0);
+		reset        : in  std_ulogic;
+		outM         : out std_ulogic_vector(WIDTH - 1 downto 0);
+		writeM       : out std_ulogic;
+		addressM_out : out std_ulogic_vector(ADDRESS_WIDTH - 1 downto 0);
+		pc           : out std_ulogic_vector(ADDRESS_WIDTH - 1 downto 0);
+		clock        : in  std_ulogic
 	);
 end CPU;
 
 architecture Behavioral of CPU is
-	signal ALU_out, comp, D, ins_val_mux_out, A_or_M : std_ulogic_vector(WIDTH - 1 downto 0);
+	signal ALU_out, comp, D, ins_val_mux_out, A_or_M, pc_s, addressM : std_ulogic_vector(WIDTH - 1 downto 0);
 begin
 	our_beloved_ALU : entity work.ALU(Behavioral)
 		generic map(
@@ -90,7 +90,9 @@ begin
 			jump   => instruction(2 downto 0),
 			reset  => reset,
 			clock  => clock,
-			outval => pc
+			outval => pc_s
 		);
 
+	pc <= pc_s(ADDRESS_WIDTH-1 downto 0);
+	addressM_out <= addressM(ADDRESS_WIDTH-1 downto 0);
 end Behavioral;

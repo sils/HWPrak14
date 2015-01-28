@@ -18,18 +18,21 @@ entity ProgramCounter is
 end ProgramCounter;
 
 architecture Behavioral of ProgramCounter is
+	signal outval_s : std_ulogic_vector(WIDTH - 1 downto 0);
+	
 begin
-	process(clock, set)
+	outval <= outval_s;
+	process(clock, reset)
 	begin
 		if reset = '1' then
-			outval <= (others => '0');
+			outval_s <= (others => '0');
 		else
-			if (j(0) = '1' and signed(comp) < 0) or
-			   (j(1) = '1' and signed(comp) = 0) or
-			   (j(2) = '1' and signed(comp) > 0) then
-				outval <= inval;
+			if (jump(0) = '1' and signed(comp) < 0) or
+			   (jump(1) = '1' and signed(comp) = 0) or
+			   (jump(2) = '1' and signed(comp) > 0) then
+				outval_s <= inval(WIDTH-1 downto 0);
 			else
-				outval <= outval + 1;
+				outval_s <= std_ulogic_vector(unsigned(outval_s) + 1);
 			end if;
 		end if;
 	end process;

@@ -18,7 +18,6 @@ end ALU;
 
 architecture Behavioral of ALU is
 	signal c1_6 : std_ulogic_vector(5 downto 0);
-	signal comp : std_ulogic_vector(WIDTH - 1 downto 0);
 begin
 	c1_6 <= c(11 downto 6);
 
@@ -26,7 +25,7 @@ begin
 	begin
 		case c1_6 is
 			when "101010" => comp <= (others => '0');
-			when "111111" => comp <= std_ulogic_vector(1);
+			when "111111" => comp <= std_ulogic_vector(to_unsigned(1, WIDTH));
 			when "111010" => comp <= (others => '1');
 			when "001100" => comp <= register_D;
 			when "110000" => comp <= A_or_M;
@@ -43,6 +42,7 @@ begin
 			when "000111" => comp <= std_ulogic_vector(signed(A_or_M) - signed(register_D));
 			when "000000" => comp <= register_D and A_or_M;
 			when "010101" => comp <= register_D or A_or_M;
+			when others => null;
 		end case;
 	end process;
 end Behavioral;

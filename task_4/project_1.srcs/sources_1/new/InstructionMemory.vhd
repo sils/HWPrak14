@@ -15,6 +15,7 @@ entity InstructionMemory is
 end InstructionMemory;
 
 architecture Behavioral of InstructionMemory is
+	signal read_data_buffer : std_logic_vector(WIDTH-1 downto 0);
 begin
 	BRAM_inst : entity work.BRAM(Behavioral)
 		generic map(MEM_ADDR_WIDTH => 10,
@@ -23,7 +24,9 @@ begin
 			        MEM_NAME       => "H:\hwprak\task_4\PWM1_short.hack")
 		port map(Clock       => clock,
 			     WriteEnable => '0',
-			     Address     => pc,
+			     Address     => std_logic_vector(pc),
 			     WriteData   => "0000000000000000",
-			     ReadData    => instruction);
+			     ReadData    => read_data_buffer);
+			     
+	instruction <= std_ulogic_vector(read_data_buffer);
 end Behavioral;

@@ -15,6 +15,7 @@
       <Option Name="TopArchitecture" Val="Behavioral"/>
       <Option Name="TopRTLFile" Val="$PSRCDIR/sim_1/new/tb_hack.vhd"/>
       <Option Name="TopAutoSet" Val="TRUE"/>
+      <Option Name="SimMode" Val="post-implementation"/>
       <Option Name="SrcSet" Val="sources_1"/>
     </Config>
   </FileSet>
